@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 pacman::p_load(tidyverse,nycflights13,gapminder,socviz)
 library(tidyverse)
-library(gap)
+library(gapminder)
 ```
 ### Preview of the gapminder data
 
