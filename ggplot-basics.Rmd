@@ -139,7 +139,13 @@ gapminder %>% ggplot(data = gapminder,
   
 ```
 
+```{r 3.16 plot}
+gapminder %>% ggplot(data = gapminder, mapping = aes(x = gdpPercap, y = lifeExp,)) +
+              geom_point(mapping = aes(color = continent)) +
+              geom_smooth(method = "loess") +
+              scale_x_log10()
 
+```
 ### Orignal graph
 
 Continue practicing by accessing an unfamiliar data set from another package.
