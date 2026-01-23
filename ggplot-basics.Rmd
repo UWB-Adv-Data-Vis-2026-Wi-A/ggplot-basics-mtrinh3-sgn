@@ -114,17 +114,29 @@ gapminder %>%
 
 ```
 
-### Figure 3.16
- 
-Here you will make your next figure.
+### Figure 3.14
 
-```{r 3.16 plot}
-p <- ggplot(data = gapminder,
-            mapping = aes(x = gdpPercap,
+```{r 3.14 plot}
+gapminder %>% ggplot(data = gapminder,
+              mapping = aes(x = gdpPercap,
+                          y = lifeExp,
+                          color = continent)) +
+              geom_point() +
+              geom_smooth(method = "loess") +
+              scale_x_log10()
+  
+```
+
+```{r 3.15 plot}
+gapminder %>% ggplot(data = gapminder,
+              mapping = aes(x = gdpPercap,
                           y = lifeExp,
                           color = continent,
-                          fill = lifeExp))
-p + geom_smooth()
+                          fill = continent)) +
+              geom_point() +
+              geom_smooth(method = "loess") +
+              scale_x_log10()
+  
 ```
 
 
